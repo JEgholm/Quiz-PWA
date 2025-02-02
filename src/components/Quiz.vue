@@ -100,7 +100,7 @@ export default {
       if (isCorrect) {
         // Fire confetti on a correct answer.
         confetti({
-          particleCount: 100,
+          particleCount: 20,
           spread: 70,
           origin: { y: 0.6 }
         });
