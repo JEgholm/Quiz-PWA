@@ -4,11 +4,14 @@
       class="app-field"
       style="background-color: black; color: white;"
     >
+      <!-- Question Text -->
       <v-card-title class="card-title">
         <div class="question-container" :style="{ fontSize: adjustedQuestionFontSize }">
           <span class="text-h5">{{ currentQuestion.text }}</span>
         </div>
       </v-card-title>
+
+      <!-- Answer Buttons -->
       <v-card-text class="card-text">
         <v-btn
           v-for="(option, index) in currentQuestion.options"
@@ -25,6 +28,8 @@
           <span class="option-text" v-html="processedOptions[index]"></span>
         </v-btn>
       </v-card-text>
+
+      <!-- Feedback -->
       <v-card-subtitle
         v-if="feedback"
         class="text-center"
@@ -32,6 +37,8 @@
       >
         {{ feedback }}
       </v-card-subtitle>
+
+      <!-- Next Question Button -->
       <v-card-actions class="justify-center" v-if="feedback">
         <v-btn color="secondary" @click="nextQuestion" class="next-button">
           Next Question
@@ -126,11 +133,6 @@ export default {
   border-radius: 12px;
 }
 
-.card-title,
-.card-text {
-  /* Optional: adjust spacing if needed */
-}
-
 .question-container {
   width: 100%;
   word-wrap: break-word;
@@ -138,27 +140,30 @@ export default {
   white-space: normal;
 }
 
-.option-text {
-  display: block;
-  white-space: normal;
-  word-break: break-word;
-}
-
+/* Enlarged answer button styles */
 .answer-button {
   background-color: lightgray;
   color: black;
   text-transform: none;
-  padding: 12px;
+  padding: 16px;           /* Increased padding */
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 3em;
+  min-height: 4em;         /* Increased minimum height */
   height: auto;
   line-height: 1.4em;
   overflow: hidden;
   word-wrap: break-word;
+}
+
+/* Enlarged option text */
+.option-text {
+  display: block;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1.1rem;       /* Slightly larger font */
 }
 
 .correct-answer {
@@ -171,9 +176,10 @@ export default {
   color: white;
 }
 
+/* Enlarged next button styles */
 .next-button {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  padding: 0.6rem 1.8rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);  /* Increased font size */
+  padding: 0.8rem 2rem;                    /* Increased padding */
   background-color: #333;
   color: white;
   border-radius: 8px;
@@ -203,17 +209,18 @@ export default {
   }
 
   .question-container {
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
   }
 
   .answer-button {
-    padding: 10px;
-    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: 14px;         /* Slightly smaller padding on mobile if needed */
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    min-height: 3.8em;
   }
 
   .next-button {
-    font-size: clamp(0.9rem, 3vw, 1rem);
-    padding: 0.5rem 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 0.7rem 1.8rem;
   }
 }
 </style>
