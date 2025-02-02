@@ -1,15 +1,15 @@
 <template>
   <div v-if="currentQuestion">
     <v-card
-      class="mx-auto my-5 app-field"
+      class="app-field"
       style="background-color: black; color: white;"
     >
-      <v-card-title>
+      <v-card-title class="card-title">
         <div class="question-container" :style="{ fontSize: adjustedQuestionFontSize }">
           <span class="text-h5">{{ currentQuestion.text }}</span>
         </div>
       </v-card-title>
-      <v-card-text>
+      <v-card-text class="card-text">
         <v-btn
           v-for="(option, index) in currentQuestion.options"
           :key="index"
@@ -22,10 +22,7 @@
           block
           @click="checkAnswer(option)"
         >
-          <span
-            class="option-text"
-            v-html="processedOptions[index]"
-          ></span>
+          <span class="option-text" v-html="processedOptions[index]"></span>
         </v-btn>
       </v-card-text>
       <v-card-subtitle
@@ -125,6 +122,13 @@ export default {
   min-height: 400px;
   padding: 30px;
   box-sizing: border-box;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+.card-title,
+.card-text {
+  /* Optional: adjust spacing if needed */
 }
 
 .question-container {
@@ -175,11 +179,27 @@ export default {
   border-radius: 8px;
 }
 
-/* Media queries for mobile devices */
+/* Mobile styles for portrait orientation */
 @media (max-width: 600px) {
   .app-field {
-    width: 95%;
-    padding: 15px;
+    width: 100vw;          /* Full viewport width */
+    height: 100vh;         /* Full viewport height */
+    margin: 0;             /* Remove extra margins */
+    border-radius: 0;      /* Remove rounded corners */
+    padding: 15px;         /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread content vertically */
+  }
+
+  .card-title {
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    flex-grow: 1;          /* Allow question options to expand */
+    overflow-y: auto;      /* Scroll if options exceed available space */
+    margin-bottom: 10px;
   }
 
   .question-container {
