@@ -2,7 +2,6 @@
   <div v-if="currentQuestion">
     <v-card
       class="mx-auto my-5 app-field"
-      max-width="900"
       style="background-color: black; color: white;"
     >
       <v-card-title>
@@ -64,7 +63,9 @@ export default {
   },
   computed: {
     processedOptions() {
-      return this.currentQuestion?.options.map(option => this.processText(option, this.currentQuestion?.useKatex)) || [];
+      return this.currentQuestion?.options.map(option =>
+        this.processText(option, this.currentQuestion?.useKatex)
+      ) || [];
     },
     adjustedQuestionFontSize() {
       if (!this.currentQuestion) return "1.5rem";
@@ -117,8 +118,9 @@ export default {
 </script>
 
 <style scoped>
+/* Base styles for larger screens */
 .app-field {
-  min-width: 600px;
+  width: 90%;
   max-width: 900px;
   min-height: 400px;
   padding: 30px;
@@ -171,5 +173,27 @@ export default {
   background-color: #333;
   color: white;
   border-radius: 8px;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 600px) {
+  .app-field {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .question-container {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+
+  .answer-button {
+    padding: 10px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+
+  .next-button {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: 0.5rem 1.5rem;
+  }
 }
 </style>
