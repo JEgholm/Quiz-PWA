@@ -29,17 +29,17 @@
         </v-btn>
       </v-card-text>
 
-      <!-- Feedback -->
+      <!-- Feedback Message -->
       <v-card-subtitle
         v-if="feedback"
-        class="text-center"
+        class="text-center feedback-message"
         :style="{ fontSize: feedbackFontSize }"
       >
         {{ feedback }}
       </v-card-subtitle>
 
       <!-- Next Question Button -->
-      <v-card-actions class="justify-center" v-if="feedback">
+      <v-card-actions class="actions-container" v-if="feedback">
         <v-btn color="secondary" @click="nextQuestion" class="next-button">
           Next Question
         </v-btn>
@@ -189,38 +189,34 @@ export default {
 @media (max-width: 600px) {
   .app-field {
     width: 100vw;          /* Full viewport width */
-    height: 100vh;         /* Full viewport height */
-    margin: 0;             /* Remove extra margins */
-    border-radius: 0;      /* Remove rounded corners */
-    padding: 15px;         /* Reduced padding */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Spread content vertically */
+    /* Instead of full viewport height, let content determine the height */
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    padding: 15px;
+    /* Remove space-between to prevent pushing content to the bottom */
+    display: block;
   }
 
-  .card-title {
-    margin-bottom: 10px;
-  }
-
+  /* Reduce bottom margin so feedback and button appear closer to the question */
   .card-text {
-    flex-grow: 1;          /* Allow question options to expand */
-    overflow-y: auto;      /* Scroll if options exceed available space */
     margin-bottom: 10px;
   }
 
-  .question-container {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  /* Increase font size for feedback and reduce top margin */
+  .feedback-message {
+    margin-top: 10px;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
   }
 
-  .answer-button {
-    padding: 14px;         /* Slightly smaller padding on mobile if needed */
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    min-height: 3.8em;
+  /* Increase next button size slightly and bring it closer */
+  .actions-container {
+    margin-top: 10px;
+    text-align: center;
   }
-
   .next-button {
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    padding: 0.7rem 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    padding: 0.9rem 2rem;
   }
 }
 </style>
