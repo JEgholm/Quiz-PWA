@@ -6,6 +6,9 @@ on:
       - main  # Runs every time you push to main
   workflow_dispatch:  # Allows manual deployment
 
+permissions:
+  contents: write  # Grant permission to push to gh-pages
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
