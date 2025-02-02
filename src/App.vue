@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>PWA Quiz</h1>
     <Quiz />
   </div>
 </template>
