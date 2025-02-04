@@ -175,6 +175,13 @@ export default {
   word-break: break-word;
   font-size: 1.1rem;
 }
+.next-button {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  padding: 0.8rem 2rem;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+}
 .correct-answer {
   background-color: #4caf50;
   color: white;
@@ -182,13 +189,6 @@ export default {
 .wrong-answer {
   background-color: #f44336;
   color: white;
-}
-.next-button {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  padding: 0.8rem 2rem;
-  background-color: #333;
-  color: white;
-  border-radius: 8px;
 }
 
 /* Desktop feedback remains as-is */
