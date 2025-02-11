@@ -26,135 +26,44 @@
     "useKatex": false
   },
   {
-    "id": 4,
-    "text": "What is the exact formula for the Arrow-Pratt measure of absolute risk aversion?",
-    "options": [
-      "-\\frac{u''(x)}{u'(x)}",
-      "\\frac{u'(x)}{u''(x)}",
-      "-\\frac{u'(x)}{u''(x)}",
-      "\\frac{u''(x)}{u'(x)}"
-    ],
-    "answer": "-\\frac{u''(x)}{u'(x)}",
-    "useKatex": true
-  },
+  "id": 8,
+  "type": "truefalse",
+  "text": "The Earth is flat.",
+  "answer": "False",
+  "useKatex": false
+},
   {
-    "id": 5,
-    "text": "In the context of general equilibrium, what does the First Fundamental Theorem of Welfare Economics state?",
-    "options": [
-      "Every competitive equilibrium is Pareto efficient",
-      "Every Pareto efficient allocation can be supported as a competitive equilibrium",
-      "Competitive equilibria are unique",
-      "Markets always lead to efficient outcomes"
-    ],
-    "answer": "Every competitive equilibrium is Pareto efficient",
-    "useKatex": false
-  },
+  "id": 6,
+  "type": "fill-in-the-blank",
+  "text": "The capital of France is ____.",
+  "answer": "Paris",
+  "useKatex": false
+},
   {
-    "id": 6,
-    "text": "Which of the following best describes the Coase Theorem?",
-    "options": [
-      "Efficient outcomes are achievable regardless of property rights, given zero transaction costs",
-      "Markets fail due to externalities",
-      "Government intervention is necessary for efficient outcomes",
-      "Property rights determine the distribution of resources"
-    ],
-    "answer": "Efficient outcomes are achievable regardless of property rights, given zero transaction costs",
-    "useKatex": false
-  },
+  "id": 4,
+  "type": "matching",
+  "text": "Match the terms with their definitions.",
+  "matches": [
+    { "left": "Term 1", "right": "Definition A" },
+    { "left": "Term 2", "right": "Definition B" }
+  ]
+},
   {
-    "id": 7,
-    "text": "What is the Envelope Theorem used for in microeconomic analysis?",
-    "options": [
-      "To evaluate how the optimal value of an objective function changes as parameters change",
-      "To determine the second derivative of utility functions",
-      "To find the maximum of a Lagrangian function",
-      "To analyze consumer demand under budget constraints"
-    ],
-    "answer": "To evaluate how the optimal value of an objective function changes as parameters change",
-    "useKatex": false
-  },
+  "id": 7,
+  "type": "multiple-correct",
+  "text": "Which of the following are prime numbers?",
+  "options": ["2", "3", "4", "5"],
+  "answers": ["2", "3", "5"],
+  "useKatex": false
+},
   {
-    "id": 8,
-    "text": "What distinguishes a subgame perfect equilibrium from a Nash equilibrium?",
-    "options": [
-      "Subgame perfect equilibrium requires equilibrium in every subgame",
-      "Nash equilibrium requires equilibrium in every subgame",
-      "Subgame perfect equilibrium only applies to static games",
-      "Nash equilibrium only applies to dynamic games"
-    ],
-    "answer": "Subgame perfect equilibrium requires equilibrium in every subgame",
-    "useKatex": false
-  },
-  {
-    "id": 9,
-    "text": "In game theory, what is a Bayesian Nash Equilibrium?",
-    "options": [
-      "An equilibrium concept for games with incomplete information where players have beliefs over types",
-      "An equilibrium where players communicate their types before the game",
-      "An equilibrium concept for games with perfect information",
-      "A strategy profile where players randomize their strategies"
-    ],
-    "answer": "An equilibrium concept for games with incomplete information where players have beliefs over types",
-    "useKatex": false
-  },
-  {
-    "id": 10,
-    "text": "What is rationalizability in the context of game theory?",
-    "options": [
-      "Strategies that are the best response to some belief about the opponents' strategies",
-      "Strategies that form a Nash equilibrium",
-      "Strategies that maximize a player's payoff irrespective of others",
-      "Strategies that are strictly dominant"
-    ],
-    "answer": "Strategies that are the best response to some belief about the opponents' strategies",
-    "useKatex": false
-  },
-  {
-    "id": 11,
-    "text": "What is the concept of monotone comparative statics concerned with?",
-    "options": [
-      "How optimal solutions change monotonically with parameters",
-      "The monotonicity of utility functions",
-      "The stability of equilibria under perturbations",
-      "The comparative analysis of static and dynamic models"
-    ],
-    "answer": "How optimal solutions change monotonically with parameters",
-    "useKatex": false
-  },
-  {
-    "id": 12,
-    "text": "What is the definition of a Perfect Bayesian Equilibrium?",
-    "options": [
-      "A strategy profile and beliefs consistent with sequential rationality in dynamic games",
-      "An equilibrium where players have perfect information",
-      "A Bayesian equilibrium that is also subgame perfect",
-      "An equilibrium that maximizes expected utility"
-    ],
-    "answer": "A strategy profile and beliefs consistent with sequential rationality in dynamic games",
-    "useKatex": false
-  },
-  {
-    "id": 13,
-    "text": "u(c) = \\frac{c^{1-\\gamma}}{1 - \\gamma}",
-    "options": [
-      "u(c) = \\frac{c^{1-\\gamma}}{1 - \\gamma}",
-      "u(c) = \\ln(c)",
-      "u(c) = c^\\gamma",
-      "u(c) = -e^{-\\gamma c}"
-    ],
-    "answer": "u(c) = \\frac{c^{1-\\gamma}}{1 - \\gamma}",
-    "useKatex": true
-  },
-  {
-    "id": 14,
-    "text": "In the Real Business Cycle (RBC) model, what is typically considered the primary driver of economic fluctuations?",
-    "options": [
-      "Technology shocks",
-      "Monetary policy shocks",
-      "Demand shocks",
-      "Fiscal policy shocks"
-    ],
-    "answer": "Technology shocks",
-    "useKatex": false
-  }
+  "id": 5,
+  "type": "self-explanation",
+  "text": "Explain the process of photosynthesis.",
+  "referenceAnswer": "Photosynthesis is the process by which green plants convert sunlight into chemical energy...",
+  "useKatex": false
+}
+
+
+
 ]
